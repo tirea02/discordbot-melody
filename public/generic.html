@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>How to use</title>
@@ -30,6 +26,7 @@
 										<ul>
 											<li><a href="index.html">Home</a></li>
 											<li><a href="generic.html">How to use</a></li>
+											<li><a href="team.html">Team Dicoder</a></li>
 											<!--
 											<li><a href="elements.html">Elements</a></li>
 											<li><a href="#">Sign Up</a></li>
@@ -61,10 +58,15 @@
 								<div class="command">
 								<h4>list of command</h4>
 								<ul>
-									<li><b>!!tutorial</b> :  simple tutorial for Melody</li>
-									<li><b>!!tutorial ko</b> : simple tutorial for Melody in Korean</li>
+									<li><b>!!language</b> : select language 1.Korean 2.English</li>
+									<li><b>!!tutorial</b> : simple tutorial for Melody</li>
 									<li><b>!!summon</b> : summon melody to my voice channel</li>
-									<li><b>!!play 'youtubelink'</b> : play youtube link audio</li>
+									<li><b>!!play 'youtubelink'</b> : play youtube link</li>
+									<p>Case1 : single video link ->  play single song</p>
+									<p>ex) https://www.youtube.com/watch?v=MhQKe-aERsU</p>
+									<p>Case2 : youtube playlist of video -> play all song in playlist</p>
+									<p>ex) https://www.youtube.com/watch?v=MhQKe-aERsU&list=RDMhQKe-aERsU</p>
+
 
 								</ul>
 								<h4> playlist create</h4>
@@ -85,6 +87,29 @@
 						</section>
 					</article>
 
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+					Launch demo modal
+				</button>
+
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+							</div>
+							<div class="modal-body">
+								...
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary">Save changes</button>
+							</div>
+						</div>
+					</div>
+				</div>
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="icons">
@@ -103,6 +128,7 @@
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
