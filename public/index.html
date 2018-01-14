@@ -6,6 +6,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link href='//fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
 		<link href='//fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
@@ -49,8 +50,10 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<h2>MELODY</h2><br>
-							<h4 class="button special" >beta</h4>
+
+							<h2>MELODY</h2>
+
+							<!--<h4 class="patch_note_version" >beta</h4><i tabindex="0" id="patch_note_banner" class="fa fa-question-circle-o" aria-hidden="true" role="button"  data-toggle="modal" data-target="#myModal"></i>-->
 
 							<p>Finest Music bot<br/>
 							for discord<br />
@@ -59,9 +62,11 @@
 								<!--<a href="http://loc/api/discord/login">Login through discord</a>-->
 							<!--</div>-->
 
-							<!--<ul class="actions">-->
-								<!--<li><a href="https://discordapp.com/oauth2/authorize?client_id=366367295888687106&scope=bot" class="button special">Add Bot</a></li>-->
-							<!--</ul>-->
+							<ul class="actions">
+								<li><a href="https://discordapp.com/oauth2/authorize?client_id=366367295888687106&scope=bot" class="button special">Add Bot<span id="patch_note_half">(beta)</span></a>
+									<i tabindex="0" id="patch_note_banner" class="fa fa-question-circle-o" aria-hidden="true" role="button"  data-toggle="modal" data-target="#myModal"></i>
+								</li>
+							</ul>
 						</div>
 						<a href="#one" class="more scrolly">Learn More</a>
 					</section>
@@ -168,10 +173,14 @@
 								<p>Finest way to share music</p>
 							</header>
 							<ul class="actions vertical">
-								<li><a href="https://discordapp.com/oauth2/authorize?client_id=366367295888687106&scope=bot" class="button fit special">Add Bot</a></li>
+								<li><a href="https://discordapp.com/oauth2/authorize?client_id=366367295888687106&scope=bot" class="button fit special">Add Bot</a>
+
+								</li>
 								<li><a href="generic.html" class="button fit">How to use</a></li>
 							</ul>
 						</div>
+
+
 					</section>
 
 				<!-- Footer -->
@@ -190,9 +199,31 @@
 
 			</div>
 
+			<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="patch_note_modal">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">What's New!</h4>
+						</div>
+						<div class="modal-body">
+							<p id="patch_note" ></p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+			<script src="https://cdn.rawgit.com/showdownjs/showdown/1.8.4/dist/showdown.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>

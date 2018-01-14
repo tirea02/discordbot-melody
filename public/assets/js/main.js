@@ -144,3 +144,63 @@ $('#test_type').typeIt({
     autoStart: false
 });
 
+function run() {
+
+	var  target = document.getElementById('patch_note');
+	var converter = new showdown.Converter(),
+        text      = '# New note for Melody v0.4 (Beta)\n' +
+            '\n' +
+            '#### 1. Password field input is deleted.\n' +
+            'The Password field is deleted from the Playlist management function, which is inconvenient for user experience (UX).\n' +
+            'The addition and deletion of individual items for the playlist and the destruction of the playlist have been changed so that they are created only for the user who created it.\n' +
+            '\n' +
+            '#### 2. You can use duplicate playlist_name with another user.\n' +
+            'In previous versions, I could not use the playlist_name created by another user.\n' +
+            'playlist_name We assumed that the preemption type is unreasonable, so we can use duplicate playlist_name with other users, but we updated to keep different playlist information.\n' +
+            '\n' +
+            '#### 3. Melody tries to talk to the user.\n' +
+            '2-1) After the result of the playlist show command, it asks whether to execute the load command for the corresponding playlist. The user can easily call the playlist load function with the expression yes.\n' +
+            '2-2) After the result of the playlist search command, it selects one of the retrieved playlists and asks whether to execute the load command. You can easily call the playlist load function by typing only numbers.\n' +
+            '\n' +
+            '#### 4. Melody\'s representative thumbnail has changed.\n' +
+            '#### 5. Melody works 24 hours a day.\n' +
+            'We will inform you of the period of regular maintenance for upgrading the new version and resolving errors.\n' +
+            '\n' +
+            '#### 6. Melody now supports language settings. (Korean added)\n' +
+            'You can set the language for the server by calling !!language. If you do not use the function, it is set to English by default.\n' +
+            '\n' +
+            '#### 7. Added the ability to view the status of the currently playing queue.\n' +
+            'When you are playing, please use !! now command. You can see at a glance which songs have been added.\n' +
+            '\n' +
+            '#### 8. Improved UI to output to personal DM when using help command.\n' +
+            '#### 9. Fixed a bug where the information about the music remaining in the queue was transmitted to the Text Channel in bulk when the stop command was executed.\n' +
+            '#### 10. Message UX at playlist play becomes easier\n' +
+            'When you play a youtube playlist or a melody playlist, you do not send a large number of Text Channel messages, but now process them in a single line.\n' +
+            '\n' +
+            '#### 11. We now support youtube\'s playlist.\n' +
+            'You can easily store it in simple play, Melody\'s playlist add, also using youtube playlist.',
+        html      = converter.makeHtml(text);
+
+    target.innerHTML = html;
+}
+
+run();
+
+var window_height;
+(function() {
+
+    $('[class*="add-animation"]').each(function () {
+        offset_diff = 30;
+
+        var waypoints = $(this).waypoint(function (direction) {
+            if (direction == 'down') {
+                $(this.element).addClass('animate');
+            } else {
+                $(this.element).removeClass('animate');
+            }
+        }, {
+            offset: window_height - offset_diff
+        });
+    });
+
+})();
